@@ -5,15 +5,19 @@ import com.sparta.memo.dto.MemoRequestDto;
 import com.sparta.memo.dto.MemoResponseDto;
 import com.sparta.memo.entity.Memo;
 import com.sparta.memo.repository.MemoRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+// Bean객체로 만들어주는 코드
+// @Component
+@Service
 public class MemoService {
 
     private final MemoRepository memoRepository;
 
-    public MemoService() {
-        this.memoRepository = memoRepository:
+    public MemoService(MemoRepository memoRepository) {
+        this.memoRepository = memoRepository;
     }
 
     public MemoResponseDto createMemo(MemoRequestDto requestDto) {

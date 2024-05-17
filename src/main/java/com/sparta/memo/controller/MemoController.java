@@ -12,7 +12,6 @@ import java.util.List;
 public class MemoController {
     // MemoController -> MemoService -> MemoRepository : 강한 결합
 
-
     private final MemoService memoService;
 
     public MemoController(MemoService memoService) {
